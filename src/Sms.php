@@ -1,6 +1,6 @@
 <?php
 
-namespace Liuhelong\Sms;
+namespace Liuhelong\Sms253;
 use Log;
 use Illuminate\Support\Facades\Http;
 
@@ -17,14 +17,15 @@ class Sms
 		$url = config('sms253.api');
 		
 		$response = Http::post($url,$params);
-		
+		//dd($response->json());
 		// 接口正常响应
 		if($response->successful()){
-			if($response->code==0){
+			$data = $response->json();
+			if($data['code']==0){
 				return true;
 			}
 			
-			throw new \Exception($response->errorMsg);
+			throw new \Exception($data['errorMsg']);
 		}
 		
 		// 非正常响应 抛出异常
