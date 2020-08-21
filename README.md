@@ -1,7 +1,7 @@
 # sms253
 
 ## 安装
-
+laravel >=7.0
 ```
 $ composer require liuhelong/sms253
 
