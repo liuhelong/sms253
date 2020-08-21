@@ -1,0 +1,28 @@
+{
+    "name": "liuhelong/sms253",
+    "description": "253sms SDK for Laravel",
+    "keywords": ["253"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "liuhelong",
+            "email": "854583481@qq.com"
+        }
+    ],
+    "require": {
+        "php": ">=7",
+        "guzzlehttp/guzzle":"^6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Liuhelong\\Sms253\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Liuhelong\\Sms253\\ServiceProvider"
+            ]
+        }
+    }
+}
